@@ -1,20 +1,20 @@
-## Common setup
+## Common setup 依赖安装
 
 `yarn install` or `npm install`
 
-## Production
+## Production 生成模式
 
 `gulp` or `gulp build` build an optimized version of app to /dist
 
-## Development
+## Development 开发模式
 
 `gulp serve` build a deploy version of app and start browsersync server + watchers
 
-## Configuration
+## Configuration 配置
 
 Build settings are conveniently exposed in `config.js`.
 
-## File structure
+## File structure 文件结构
 
 ```bash
 ├── /dist/                      # Production directory (minified, optimized and compiled files)
@@ -38,7 +38,7 @@ Build settings are conveniently exposed in `config.js`.
 ├── yarn.lock                   # Yarn lock file
 ```
 
-## Other gulp tasks
+## Other gulp tasks gulp任务
 
 `gulp pug` compile Pug files
 
