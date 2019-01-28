@@ -1,0 +1,99 @@
+.ax-input {
+    display:inline;
+
+    &_light {
+        $this:&;
+
+        display:block;
+        position:relative;
+
+        &-line {
+            display:block;
+            position:absolute;
+            left:0;
+            right:0;
+            bottom:0;
+            height:2px;
+            transform:scaleX(0);
+            transform-origin:right center;
+
+            background:$color-primary;
+
+            transition:all 0.3s;
+        }
+
+        &-addon {
+            position:absolute;
+            display:flex;
+            align-items:center;
+
+            &.-right {
+                top:0;
+                right:0;
+                bottom:0;
+            }
+        }
+
+        input {
+            margin:0;
+            padding:20px 0;
+            width:100%;
+
+            color:$color-text;
+            background:none;
+            border:0;
+            border-bottom:2px $color-base solid;
+            border-radius:0;
+            box-shadow:none;
+            outline:none;
+
+            font-family:$font-family-secondary;
+            font-size:16px;
+            line-height:normal;
+
+            transition:all 0.2s;
+
+            @media (min-width:$screen-ul-min) {
+                font-size:20px;
+            }
+
+            &::placeholder {
+                color:$color-disabled;
+                transition:color 0.2s;
+            }
+
+            &:hover {
+                &::placeholder {
+                    color:lighten($color-disabled, 5%);
+                }
+            }
+
+            &:focus {
+                + #{$this} {
+                    &-line {
+                        transform:scaleX(1);
+                        transition-duration:0s;
+                        animation:ax-input_light-line-show 0.4s forwards;
+                    }
+                }
+            }
+
+            &:invalid {
+                box-shadow:none;
+                outline:0;
+            }
+        }
+    }
+}
+
+@keyframes ax-input_light-line-show {
+    0% {
+        transform:scaleX(0);
+        transform-origin:left center;
+    }
+
+    100% {
+        transform:scaleX(1);
+        transform-origin:left center;
+    }
+}

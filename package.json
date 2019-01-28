@@ -1,0 +1,47 @@
+{
+	"name": "AAX",
+	"version": "1.1.5",
+	"author": "Cuberto",
+	"contributors": [],
+	"dependencies": {
+		"bootstrap-sass": "^3.3.7",
+		"browser-detect": "^0.2.28",
+		"jquery": "^3.3.1",
+		"svg4everybody": "^2.1.9",
+		"wheel-indicator": "^1.2.0",
+		"gsap": "^2.0.2",
+		"owl.carousel": "^2.3.4",
+		"smooth-scrollbar": "8.3.1",
+		"scrollmagic": "2.0.6"
+	},
+	"browserslist": [
+		"since 2010",
+		"last 2 versions"
+	],
+	"devDependencies": {
+		"babel-core": "6.x",
+		"babel-loader": "7.*",
+		"babel-preset-env": "1.x",
+		"browser-sync": "2.x",
+		"chalk": "2.x",
+		"del": "3.x",
+		"gulp": "3.9.x",
+		"gulp-autoprefixer": "5.x",
+		"gulp-clean-css": "3.x",
+		"gulp-filter": "5.x",
+		"gulp-if": "2.x",
+		"gulp-load-plugins": "1.x",
+		"gulp-pug": "4.x",
+		"gulp-rtlcss": "1.x",
+		"gulp-sass": "4.x",
+		"gulp-sequence": "0.x",
+		"gulp-sourcemaps": "2.x",
+		"gulp-svg-sprite": "1.x",
+		"gulp-uglify": "3.x",
+		"gulp-watch": "5.x",
+		"gulp.spritesmith": "6.x",
+		"imports-loader": "0.x",
+		"merge-stream": "1.x",
+		"webpack-stream": "5.x"
+	}
+}

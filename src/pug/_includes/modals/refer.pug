@@ -1,0 +1,34 @@
+.ax-modal.ax-modal_full(role="dialog")#modal-refer
+    .ax-modal_full-close
+        button.ax-btn.ax-btn_close(type="button", data-modal-close="#modal-refer"): +svgsprite('times-thin')
+    .ax-modal_full-backdrop
+    .ax-modal_full-dialog(role="document")
+        .ax-refer
+            .ax-refer-wrap
+                .ax-refer-body
+                    .ax-refer-container
+                        .ax-refer-header
+                            .ax-header
+                                h3: strong !{__.refer.header}
+                        .ax-refer-text !{__.refer.text}
+                        .ax-refer-messages
+                            .ax-refer-message.-success !{__.refer.message.success}
+                            .ax-refer-message.-error !{__.refer.message.error}
+                        .ax-refer-action
+                            button.ax-btn.ax-btn_flat.-lg
+                                span !{__.refer.refriend}
+                            button.ax-btn.ax-btn_flat.-lg
+                                span !{__.refer.refriends}
+                        .ax-refer-form
+                            form.ax-form
+                                .ax-form-grid
+                                    .ax-form-grid-col
+                                        .ax-input.ax-input_light
+                                            input(type="text", placeholder=__.refer.form.name)
+                                            .ax-input_light-line
+                                    .ax-form-grid-col
+                                        .ax-input.ax-input_light
+                                            input(type="email", placeholder=__.refer.form.email)
+                                            .ax-input_light-line
+                                            .ax-input_light-addon.-right
+                                                button.ax-btn.ax-btn_clean(type="submit"): +svgsprite('chevron-right')

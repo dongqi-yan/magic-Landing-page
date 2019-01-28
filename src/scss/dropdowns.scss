@@ -1,0 +1,125 @@
+.ax-dropdown {
+    display:inline-block;
+    position:relative;
+
+    &_select {
+        $this:&;
+
+        &-toggle {
+            color:inherit;
+            transition:opacity 0.2s;
+
+            cursor:pointer;
+
+            &-text {
+                display:inline-block;
+                vertical-align:middle;
+            }
+
+            &-arr {
+                display:inline-block;
+                padding:0 0 0 10px;
+                vertical-align:middle;
+                line-height:0;
+
+                svg {
+                    width:8px;
+                    height:4px;
+
+                    transition:transform .3s;
+                }
+            }
+
+            &:hover, &:focus {
+                opacity:0.8;
+                text-decoration:none;
+            }
+        }
+
+        &-menu {
+            display:none;
+            position:absolute;
+            top:40px;
+            left:-20px;
+            padding:20px 25px;
+
+            min-width:200px;
+            max-height:250px;
+            overflow:auto;
+            z-index:1000;
+
+            background:$color-fill;
+
+            &::-webkit-scrollbar {
+                width:0;
+            }
+
+            &-item {
+                position:relative;
+                display:block;
+                padding:5px 0;
+
+                color:$color-text;
+                cursor:pointer;
+
+                font-family:$font-family-secondary;
+                font-size:12px;
+                text-align:left;
+
+                transition:background 0.2s, color 0.2s;
+
+                @media (min-width:$screen-lg-min) {
+                    font-size:13px;
+                }
+
+                &:hover {
+                    color:rgba($color-primary, 9);
+                }
+            }
+
+            &.-right {
+                left:auto;
+                right:-20px;
+            }
+
+            &.-aright {
+                left:auto;
+                right:-100px;
+
+                @media (min-width:$screen-sm-min) {
+                    right:auto;
+                    left:-20px;
+                }
+            }
+        }
+
+        &.-open {
+            #{$this} {
+                &-toggle {
+                    &-arr {
+                        svg {
+                            transform:rotate(-180deg);
+                        }
+                    }
+                }
+
+                &-menu {
+                    display:block;
+                    animation:ax-dropdown-show 0.4s;
+                }
+            }
+        }
+    }
+}
+
+@keyframes ax-dropdown-show {
+    0% {
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    100% {
+        opacity:1;
+        transform:translateY(0);
+    }
+}

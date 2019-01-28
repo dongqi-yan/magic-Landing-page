@@ -1,0 +1,83 @@
+.ax-brief {
+    $root:&;
+
+    display:flex;
+    min-height:100vh;
+    align-items:center;
+    justify-content:center;
+
+    background:$color-graybase;
+
+    // TODO: Check
+    .ie & {
+        height:100vh;
+    }
+
+    &-wrap {
+        width:100%;
+        padding:40px 0;
+
+        @media (min-width:$screen-sm-min) {
+            padding:75px 0;
+        }
+
+        @media (min-width:$screen-lg-min) {
+            padding:100px 0;
+        }
+    }
+
+    &-container {
+        @extend .ax-container.-lg;
+    }
+
+    &-grid {
+        @media (min-width:$screen-lg-min) {
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            white-space:nowrap;
+        }
+
+        &-col {
+            &.-left {
+                @media (min-width:$screen-lg-min) {
+                    flex:1 0;
+                }
+            }
+
+            &.-right {
+                padding:20px 0 0 0;
+
+                @media (min-width:$screen-lg-min) {
+                    padding:0 0 0 20px;
+                }
+            }
+        }
+    }
+
+    &-text {
+        font-size:14px;
+        font-weight:500;
+        line-height:24px;
+
+        @media (min-width:$screen-sm-min) {
+            font-size:17px;
+            line-height:26px;
+        }
+
+        @media (min-width:$screen-ul-min) {
+            font-size:25px;
+            line-height:37px;
+        }
+
+        p {
+            display:inline;
+            margin:0;
+            padding:0;
+
+            @media (min-width:$screen-lg-min) {
+                display:block;
+            }
+        }
+    }
+}

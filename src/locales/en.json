@@ -1,0 +1,317 @@
+{
+	"lang": "en",
+	"language": "English",
+	"navbar": {
+		"lang": [
+			"EN",
+			"JP"
+		],
+		"access": "Get Early Access"
+	},
+	"footer": {
+		"nav": {
+			"privacy": "Privacy policy",
+			"terms": "Terms of use"
+		},
+		"copyright": "AAX Technology © 2018 | All Rights Reserved",
+		"mail": "contact@aax.com",
+		"address": [
+			"10/F, 33 Lockhart Rd,",
+			"Wan Chai, Hong Kong"
+		],
+		"holding": "Part of Atom Holdings"
+	},
+	"home": {
+		"hero": {
+			"header": [
+				"Building the Foundations of Trust",
+				"for Digital Currencies"
+			],
+			"getearly": "Get Early Access",
+			"powered": [
+				"Powered by <img src=\"/assets/img/logo/lseg.png\", srcset=\"/assets/img/logo/lseg@2x.png 2x\", alt>",
+				"<b>Part of London Stock Exchange Group</b>"
+			]
+		},
+		"brief": {
+			"header": [
+				"Fairness and Integrity",
+				"For All Traders"
+			],
+			"text": [
+				"AAX is an institutional-grade platform enabling people to access a protected",
+				" and trustworthy market by leveraging a technology from a regulated market."
+			]
+		},
+		"spec": {
+			"header": [
+				"Platform",
+				"Capabilities"
+			],
+			"feature": [
+				{
+					"caption": "Fairness",
+					"header": [
+						"Regulated Markets",
+						"Matching Engine"
+					]
+				},
+				{
+					"caption": "Integraty",
+					"header": [
+						"Market and Trade",
+						"Surveillance"
+					]
+				},
+				{
+					"caption": "Capacity",
+					"val": "trades per second"
+				},
+				{
+					"caption": "Speed",
+					"val": "seconds latency"
+				},
+				{
+					"caption": "Stability",
+					"val": "percentage uptime"
+				}
+			]
+		},
+		"feature": {
+			"header": [
+				"An Innovative and Reliable Experience",
+				"For All Users"
+			],
+			"list": [
+				{
+					"header": [
+						"Intuitive",
+						"User Experience"
+					],
+					"text": [
+						"Inspired by professional trading interface"
+					]
+				},
+				{
+					"header": [
+						"Security",
+						"by Design"
+					],
+					"text": [
+						"Cyber Security Control ISO 27001 International Standart"
+					]
+				},
+				{
+					"header": [
+						"Cutting Edge",
+						"Technology"
+					],
+					"text": [
+						"<img src=\"/assets/img/logo/lseg.png\", srcset=\"/assets/img/logo/lseg@2x.png 2x\", alt>",
+						"",
+						"World Class Technology Solution for the Growing and Innovating Blockchain Industry, Proven by 40 Regulated Markets"
+					]
+				},
+				{
+					"header": [
+						"Connectivity",
+						"for Low-Latency Trading"
+					],
+					"link": "Request for information"
+				}
+			]
+		},
+		"showcase": {
+			"list": [
+				{
+					"title": "Market Data",
+					"text": [
+						"World Class Technology Solution  for the Growing and Innovating  Blockchain Industry varias."
+					]
+				},
+				{
+					"title": "Exchange",
+					"text": [
+						"World Class Technology Solution  for the Growing and Innovating  Blockchain Industry varias."
+					]
+				},
+				{
+					"title": "Wallet",
+					"text": [
+						"World Class Technology Solution  for the Growing and Innovating  Blockchain Industry varias."
+					]
+				}
+			]
+		},
+		"footnote": {
+			"header": [
+				"Trust and Security",
+				"At Every Level"
+			],
+			"text": [
+				"Trusted intelligence, investigations and advisory services since 1972."
+			],
+			"title": [
+				"Our Official Risk Management Advisor",
+				"Supports Us Since Day One"
+			],
+			"caption": "Virtual <nobr>Security | Real-Time</nobr> <nobr>Monitoring | Internal</nobr> Surveillance System Architecture <nobr>Review | Process</nobr> & People Management",
+			"name": {
+				"title": "Paul Jackson",
+				"text": [
+					"Leader of Asia-Pacific cybersecurity and investigations practice."
+				],
+				"more": "More About Paul",
+				"tooltip": [
+					"Arrived as a member of the Hong Kong Police Force in 1988. With an engineering background, Paul moved into the technology Policing area in the mid-90s when the mobile telecommunications market first opened up. Since then he has pio- neered cyber-investigations and digital forensics ca- pabilities within the HK Police, and subsequently with Interpol and JPMorgan."
+				]
+			}
+		},
+		"team": {
+			"header": [
+				"Our",
+				"Team"
+			],
+			"info": "Every team member complements AAX with rich perspectives and agility.",
+			"items": [
+				{
+					"title": "PRESERVE",
+					"text": [
+						"PRESERVE"
+					],
+					"name": "PRESERVE"
+				},
+				{
+					"title": "Legal & Compliance Manager",
+					"text": [
+						"Perque cladium congerie fessas, hiemem agens apud in sollicitudines varias"
+					],
+					"name": "Bader Yousuf"
+				},
+				{
+					"title": "Client Service Manager",
+					"text": [
+						"Perque cladium congerie fessas, hiemem agens apud in sollicitudines varias"
+					],
+					"name": "Jason Ryoo"
+				},
+				{
+					"title": "CEO",
+					"text": [
+						"Perque cladium congerie fessas, hiemem agens apud in sollicitudines varias"
+					],
+					"name": "Peter Lin"
+				},
+				{
+					"title": "Senior Operation Manager",
+					"text": [
+						"Perque cladium congerie fessas, hiemem agens apud in sollicitudines varias"
+					],
+					"name": "Mike Wong"
+				},
+				{
+					"title": "Senior People & Culture Manager",
+					"text": [
+						"Perque cladium congerie fessas, hiemem agens apud in sollicitudines varias"
+					],
+					"name": "Edward McKay"
+				},
+				{
+					"title": "VPof Technology",
+					"text": [
+						"Perque cladium congerie fessas, hiemem agens apud in sollicitudines varias"
+					],
+					"name": "Michael Wong"
+				},
+				{
+					"title": "Finance Operation Manager",
+					"text": [
+						"Perque cladium congerie fessas, hiemem agens apud in sollicitudines varias"
+					],
+					"name": "Andrew Tsang"
+				},
+				{
+					"title": "VPof Development",
+					"text": [
+						"Perque cladium congerie fessas, hiemem agens apud in sollicitudines varias"
+					],
+					"name": "Pravin Bezwada"
+				},
+				{
+					"title": "People Manager",
+					"text": [
+						"Perque cladium congerie fessas, hiemem agens apud in sollicitudines varias"
+					],
+					"name": "Tammy Tse"
+				},
+				{
+					"title": "VPof Product Management",
+					"text": [
+						"Perque cladium congerie fessas, hiemem agens apud in sollicitudines varias"
+					],
+					"name": "Thor Chan"
+				},
+				{
+					"title": "Executive Assistant to CEO",
+					"text": [
+						"Perque cladium congerie fessas, hiemem agens apud in sollicitudines varias"
+					],
+					"name": "Tony Leung"
+				},
+				{
+					"title": "VPof Research & Development",
+					"text": [
+						"Perque cladium congerie fessas, hiemem agens apud in sollicitudines varias"
+					],
+					"name": "Jack Zhou"
+				}
+			]
+		},
+		"outro": {
+			"name": "Peter Lin",
+			"title": "CEO",
+			"text": [
+				"“Trust is at the heart of our philosophy. With the AAX ",
+				"experience, we reflect the integrity, security and ",
+				"performance the team and I are dedicated to, everyday.”"
+			]
+		},
+		"outro2": {
+			"name": "Lorne Chambers",
+			"title": "Head of Sales, LSEG Technology",
+			"text": [
+				"“We are excited to have been selected by AAX to provide a ",
+				"world class technology with LSEG Technology, introducing ",
+				"for the first time our solution in this innovative market”"
+			]
+		},
+		"starring": {
+			"social": {
+				"header": "Join Our Communities"
+			},
+			"access": {
+				"header": [
+					"AAX is launching soon",
+					"Get your early access now"
+				],
+				"form": {
+					"email": "Enter Your Mail Address"
+				}
+			}
+		}
+	},
+	"refer": {
+		"header": "Thank you for being part of this journey with us!",
+		"text": "You are now the <b id=\"modal-refer-count\">105th</b> pioneer to join our community and will have the privilege to be personally informed about our upcoming news and launching event!",
+		"refriend": "Refer a friend",
+		"refriends": "Refer one more friend",
+		"form": {
+			"name": "Your Full Name",
+			"email": "Friend Mail Address"
+		},
+		"message": {
+			"success": "Success! Invite Was Sent to Your Friend",
+			"error": "An error occurred. Try again or email us"
+		}
+	}
+}

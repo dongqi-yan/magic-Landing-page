@@ -1,0 +1,113 @@
+.ax-header {
+    $root:&;
+
+    h1, h2, h3, h4 {
+        margin:0;
+        padding:0;
+
+        font-size:20px;
+        line-height:normal;
+
+        @media (min-width:$screen-sm-min) {
+            font-size:24px;
+        }
+
+        @media (min-width:$screen-ul-min) {
+            font-size:32px;
+        }
+
+        b, em, strong {
+            display:inline-block;
+        }
+
+        em {
+            font-family:$font-family-secondary;
+            font-weight:300;
+            font-style:inherit;
+            //line-height:0.5;
+        }
+
+        strong {
+            font-family:$font-family-secondary;
+            font-weight:500;
+        }
+    }
+
+    &.-xs {
+        h1, h2, h3, h4 {
+            font-size:16px;
+
+            @media (min-width:$screen-sm-min) {
+                font-size:18px;
+            }
+
+            @media (min-width:$screen-ul-min) {
+                font-size:25px;
+            }
+
+            em {
+                line-height:1.6;
+            }
+        }
+    }
+
+    &.-sm {
+        h1, h2, h3, h4 {
+            font-size:16px;
+
+            @media (min-width:$screen-sm-min) {
+                font-size:22px;
+            }
+
+            @media (min-width:$screen-ul-min) {
+                font-size:30px;
+            }
+
+            em {
+                line-height:1.6;
+
+                @media (min-width:$screen-xl-min) {
+                    line-height:1;
+                }
+            }
+        }
+    }
+
+    &.-md {
+        h1, h2, h3, h4 {
+            @media (min-width:$screen-sm-min) {
+                font-size:21px;
+                line-height:29px;
+            }
+
+            @media (min-width:$screen-ul-min) {
+                font-size:30px;
+                line-height:40px;
+            }
+        }
+    }
+
+    &.-lg {
+        h1, h2, h3, h4 {
+            line-height:26px;
+
+            @media (min-width:$screen-sm-min) {
+                font-size:40px;
+                letter-spacing:-0.8px;
+                line-height:46px;
+            }
+
+            @media (min-width:$screen-xl-min) {
+                font-size:50px;
+                letter-spacing:-1.2px;
+                line-height:60px;
+            }
+
+            @media (min-width:$screen-ul-min) {
+                font-size:70px;
+                letter-spacing:-1.4px;
+                line-height:79px;
+            }
+        }
+    }
+}

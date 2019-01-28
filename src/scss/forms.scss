@@ -1,0 +1,28 @@
+.ax-form {
+    $root:&;
+
+    &-grid {
+        margin:0 -10px;
+
+        @media (min-width:$screen-md-min) {
+            display:flex;
+            justify-content:space-between;
+        }
+
+        &-col {
+            padding:0 10px;
+
+            @media (min-width:$screen-md-min) {
+                flex:1 0;
+            }
+        }
+    }
+
+    &-group {
+        margin:0 0 30px 0;
+    }
+
+    &-submit {
+        margin:10px 0 0 0;
+    }
+}

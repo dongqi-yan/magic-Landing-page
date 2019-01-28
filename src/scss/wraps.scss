@@ -1,0 +1,97 @@
+.ax-view {
+    height:100%;
+}
+
+.ax-content {
+    height:100%;
+
+    /* Smooth Scrollbar Approach */
+    .scrollbar {
+        $this:&;
+
+        &-thumb {
+            background:$color-primary;
+
+            &-y {
+                width:6px;
+                left:auto;
+                right:0;
+
+                //transition:width 0.2s;
+
+                &:active {
+                    width:12px;
+                }
+            }
+        }
+
+        &-track {
+            display:none !important;
+            background:rgba($color-base, 0);
+            transition:background 0.2s, opacity 0.2s;
+
+            &-y {
+                width:15px;
+
+                &:hover {
+                    background:rgba($color-base, 0.1);
+
+                    .scrollbar-thumb-y {
+                        width:12px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* ScrollMagic Approach */
+    .scrollmagic-pin-spacer {
+        margin:0 !important;
+
+        > * {
+            margin:0 !important;
+        }
+    }
+}
+
+.ax-container {
+    padding:0 20px;
+
+    @media (min-width:$screen-sm-min) {
+        padding:0 30px;
+    }
+
+    @media (min-width:$screen-lg-min) {
+        margin:0 auto;
+        max-width:$screen-lg-min;
+    }
+
+    @media (min-width:$screen-xl-min) {
+        padding:0 60px;
+        max-width:$screen-xl-min;
+    }
+
+    &.-lg {
+        padding:0 20px;
+
+        @media (min-width:$screen-sm-min) {
+            padding:0 60px;
+        }
+
+        @media (min-width:$screen-lg-min) {
+            margin:0 auto;
+            padding:0 100px;
+            max-width:$screen-lg-min;
+        }
+
+        @media (min-width:$screen-ul-min) {
+            padding:0 250px;
+            max-width:$screen-ul-min;
+        }
+    }
+}
+
+.ax-bound {
+    width:100%;
+    overflow:hidden;
+}

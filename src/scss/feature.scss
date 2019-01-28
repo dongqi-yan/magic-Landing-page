@@ -1,0 +1,208 @@
+.ax-feature {
+    $root:&;
+
+    display:flex;
+    min-height:100vh;
+    align-items:center;
+    justify-content:center;
+
+    background:$color-graybase;
+
+    &-wrap {
+        width:100%;
+        padding:40px 0;
+
+        @media (min-width:$screen-sm-min) {
+            padding:75px 0;
+        }
+
+        @media (min-width:$screen-lg-min) {
+            padding:100px 0;
+        }
+
+        @media (min-width:$screen-xl-min) {
+            padding:135px 0;
+        }
+
+        &.-double {
+            padding:40px 0 80px 0;
+
+            @media (min-width:$screen-sm-min) {
+                padding:75px 0 150px 0;
+            }
+
+            @media (min-width:$screen-lg-min) {
+                padding:100px 0 200px 0;
+            }
+
+            @media (min-width:$screen-ul-min) {
+                padding:135px 0 270px 0;
+            }
+        }
+    }
+
+    &-container {
+        @extend .ax-container.-lg;
+    }
+
+    &-grid {
+        @media (min-width:$screen-sm-min) {
+            display:flex;
+        }
+
+        &-col {
+            &.-right {
+                @media (min-width:$screen-sm-min) {
+                    padding:0 0 0 40px;
+                }
+
+                @media (min-width:$screen-md-min) {
+                    padding:0 0 0 120px;
+                }
+            }
+        }
+    }
+
+    &-header {
+        margin:0 0 50px 0;
+
+        @media (min-width:$screen-sm-min) {
+            max-width:250px;
+        }
+
+        @media (min-width:$screen-ul-min) {
+            max-width:400px;
+        }
+    }
+
+    &-list {
+        $this:&;
+
+        .desktop & {
+            @media (min-width:$screen-sm-min) {
+                padding:100px 0 0 0;
+            }
+
+            @media (min-width:$screen-lg-min) {
+                padding:200px 0 0 0;
+            }
+        }
+
+        &-item {
+            padding:25px 0;
+
+            @media (min-width:$screen-sm-min) {
+                padding:18px 0;
+            }
+
+            @media (min-width:$screen-lg-min) {
+                padding:26px 0;
+            }
+
+            @media (min-width:$screen-ul-min) {
+                padding:45px 0;
+            }
+
+            &:first-child {
+                padding-top:0;
+            }
+
+            &:last-child {
+                padding-bottom:0;
+            }
+
+            &-grid {
+                display:flex;
+            }
+
+            &-ico {
+                img {
+                    margin:0 10px 0 0;
+                    width:33px;
+
+                    @media (min-width:$screen-sm-min) {
+                        margin:3px 15px 0 0;
+                        width:55px;
+                    }
+
+                    @media (min-width:$screen-ul-min) {
+                        width:auto;
+                    }
+                }
+            }
+
+            &-header {
+                @media (min-width:$screen-sm-min) {
+                    max-width:280px;
+                }
+
+                @media (min-width:$screen-xl-min) {
+                    max-width:600px;
+                }
+            }
+
+            &-text {
+                margin:10px 0 0 0;
+
+                color:rgba($color-base, 0.6);
+
+                font-family:$font-family-secondary;
+                font-size:12px;
+                line-height:20px;
+
+                img {
+                    margin:0 0 5px 0;
+                    max-width:95px;
+
+                    @media (min-width:$screen-sm-min) {
+                        margin:10px 0 5px 0;
+                        max-width:88px;
+                    }
+
+                    @media (min-width:$screen-ul-min) {
+                        margin:10px 0;
+                        max-width:112px;
+                    }
+                }
+
+                @media (min-width:$screen-sm-min) {
+                    max-width:390px;
+
+                    font-size:13px;
+                    line-height:28px;
+                }
+
+                @media (min-width:$screen-ul-min) {
+                    margin:15px 0 0 0;
+
+                    font-size:18px;
+                }
+            }
+
+            &-more {
+                margin:24px 0 0 0;
+
+                @media (min-width:$screen-sm-min) {
+                    margin:20px 0 0 0;
+                }
+
+                @media (min-width:$screen-ul-min) {
+                    margin:27px 0 0 0;
+                }
+            }
+        }
+
+        &.-selectable {
+            #{$this} {
+                &-item {
+                    opacity:0.4;
+                    transition:opacity 0.5s;
+
+                    &.-active {
+                        opacity:1;
+                    }
+                }
+            }
+        }
+    }
+}

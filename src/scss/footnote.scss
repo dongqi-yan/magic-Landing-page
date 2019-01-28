@@ -1,0 +1,222 @@
+.ax-footnote {
+    $root:&;
+
+    display:flex;
+    min-height:100vh;
+    align-items:center;
+    justify-content:center;
+
+    background:$color-graybase;
+
+    // TODO: Check
+    .ie & {
+        height:100vh;
+    }
+
+    &-wrap {
+        width:100%;
+        padding:40px 0;
+
+        @media (min-width:$screen-sm-min) {
+            padding:75px 0;
+        }
+
+        @media (min-width:$screen-lg-min) {
+            padding:100px 0;
+        }
+
+        @media (min-width:$screen-xl-min) {
+            padding:120px 0;
+        }
+
+        @media (min-width:$screen-ul-min) {
+            padding:135px 0;
+        }
+    }
+
+    &-container {
+        @extend .ax-container.-lg;
+    }
+
+    &-grid {
+        @media (min-width:$screen-sm-min) {
+            display:flex;
+        }
+
+        &-col {
+            @media (min-width:$screen-sm-min) {
+                flex:1;
+            }
+
+            &.-left {
+                @media (min-width:$screen-sm-min) {
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:space-between;
+                }
+            }
+        }
+    }
+
+    &-text {
+        margin:40px 0 0 0;
+
+        color:$color-smooth;
+
+        font-family:$font-family-secondary;
+        font-size:14px;
+        line-height:24px;
+
+        @media (min-width:$screen-sm-min) {
+            margin:0;
+            max-width:286px;
+
+            font-size:14px;
+            line-height:24px;
+        }
+
+        @media (min-width:$screen-ul-min) {
+            max-width:340px;
+
+            font-size:18px;
+            line-height:28px;
+        }
+
+        img {
+            margin:0 0 30px 0;
+            max-width:60px;
+
+            @media (min-width:$screen-sm-min) {
+                margin:0 0 20px 0;
+                max-width:110px;
+            }
+
+            @media (min-width:$screen-xl-min) {
+                margin:0 0 35px 0;
+                max-width:none;
+            }
+        }
+    }
+
+    &-title {
+        margin:40px 0 0 0;
+
+        @media (min-width:$screen-sm-min) {
+            margin:0;
+        }
+    }
+
+    &-caption {
+        margin:20px 0 0 0;
+
+        color:$color-primary;
+
+        font-family:$font-family-secondary;
+        font-size:14px;
+        line-height:26px;
+
+        @media (min-width:$screen-sm-min) {
+            margin:10px 0 0 0;
+        }
+
+        @media (min-width:$screen-ul-min) {
+            margin:15px 0 0 0;
+
+            font-size:18px;
+            line-height:28px;
+        }
+    }
+
+    &-name {
+        margin:40px 0 0 0;
+
+        @media (min-width:$screen-sm-min) {
+            margin:70px 0 0 0;
+        }
+
+        @media (min-width:$screen-ul-min) {
+            margin:95px 0 0 0;
+        }
+
+        &-grid {
+            display:flex;
+
+            &-col {
+                &.-left {
+                    padding:0 20px 0 0;
+
+                    @media (min-width:$screen-sm-min) {
+                        padding:0 30px 0 0;
+                    }
+
+                    @media (min-width:$screen-ul-min) {
+                        padding:0 35px 0 0;
+                    }
+                }
+            }
+        }
+
+        &-photo {
+            width:130px;
+            height:130px;
+
+            background-size:cover;
+            background-position:top center;
+            background-repeat:no-repeat;
+
+            @media (min-width:$screen-sm-min) {
+                width:160px;
+                height:160px;
+            }
+
+            @media (min-width:$screen-ul-min) {
+                width:220px;
+                height:220px;
+            }
+        }
+
+        &-title {
+            font-family:$font-family-secondary;
+            font-size:16px;
+            font-weight:500;
+
+            @media (min-width:$screen-sm-min) {
+                font-size:18px;
+            }
+
+            @media (min-width:$screen-ul-min) {
+                font-size:25px;
+            }
+        }
+
+        &-text {
+            margin:11px 0 0 0;
+
+            color:$color-smooth;
+
+            font-family:$font-family-secondary;
+            font-size:14px;
+            line-height:23px;
+
+            @media (min-width:$screen-xl-min) {
+                margin:9px 0 0 0;
+                max-width:380px;
+
+                font-size:18px;
+                line-height:28px;
+            }
+        }
+
+        &-more {
+            margin:20px 0 0 0;
+
+            @media (min-width:$screen-sm-min) {
+                margin:25px 0 0 0;
+            }
+
+            @media (min-width:$screen-xl-min) {
+                margin:40px 0 0 0;
+            }
+        }
+    }
+}

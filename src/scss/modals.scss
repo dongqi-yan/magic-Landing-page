@@ -1,0 +1,139 @@
+.ax-modal {
+    display:inline;
+
+    &_full {
+        $this:&;
+
+        display:none;
+        position:fixed;
+        top:0;
+        right:0;
+        left:0;
+        bottom:0;
+        z-index:110;
+        overflow:hidden;
+        pointer-events:none;
+
+        &-backdrop {
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            min-height:100vh;
+            transform:translate3d(0, -110%, 0);
+
+            background:$color-graybase;
+
+            transition:transform 0.6s 0.2s;
+
+            &:before {
+                content:"";
+                position:absolute;
+                top:0;
+                left:0;
+                right:0;
+                height:100px;
+                transform:translateY(-50%) rotate(3deg);
+
+                background:inherit;
+            }
+
+            &:after {
+                content:"";
+                position:absolute;
+                bottom:0;
+                left:0;
+                right:0;
+                height:100px;
+                transform:translateY(50%) rotate(3deg);
+
+                background:inherit;
+            }
+        }
+
+        &-close {
+            position:absolute;
+            z-index:200;
+            top:30px;
+            right:35px;
+            transform:scale(0);
+
+            backface-visibility:hidden;
+
+            transition:transform 0.3s ease-in-out;
+
+            @media (min-width:$screen-sm-min) {
+                top:40px;
+                right:45px;
+            }
+
+            @media (min-width:$screen-xl-min) {
+                top:60px;
+                right:128px;
+            }
+        }
+
+        &-dialog {
+            position:relative;
+            height:100%;
+            width:100%;
+            overflow:hidden;
+            overflow-y:auto;
+            -webkit-overflow-scrolling:touch;
+            z-index:10;
+            transform:translate3d(0, -10%, 0);
+
+            opacity:0;
+
+            transition:transform 0.6s, opacity 0.6s;
+        }
+
+        &.-visible {
+            pointer-events:auto;
+
+            #{$this} {
+                &-backdrop {
+                    transform:translateY(0);
+                    transition-duration:0s;
+                    transition-delay:0s;
+                    animation:ax-modal_full-backdrop-show 0.6s;
+                }
+
+                &-close {
+                    transform:scale(1);
+                    transition-delay:0.3s;
+                }
+
+                &-dialog {
+                    opacity:1;
+                    transform:translateY(0);
+                    transition-duration:0s, 0s;
+                    animation:ax-modal_full-dialog-show 0.6s 0.2s backwards;
+                }
+            }
+        }
+    }
+}
+
+@keyframes ax-modal_full-backdrop-show {
+    0% {
+        transform:translate3d(0, 110%, 0);
+    }
+
+    100% {
+        transform:translate3d(0, 0, 0);
+    }
+}
+
+@keyframes ax-modal_full-dialog-show {
+    0% {
+        opacity:0;
+        transform:translate3d(0, 10%, 0);
+    }
+
+    100% {
+        opacity:1;
+        transform:translate3d(0, 0, 0);
+    }
+}

@@ -1,0 +1,36 @@
+html {
+    height:100%;
+}
+
+body {
+    height:100%;
+    margin:0;
+    padding:0;
+
+    background:$color-bg;
+    color:$color-text;
+
+    font-family:$font-family;
+    font-size:$font-size;
+    letter-spacing:$letter-spacing;
+    line-height:$line-height;
+
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+a {
+    color:$color-link;
+    cursor:pointer;
+
+    &:hover, &:focus {
+        color:$color-link-hover;
+        text-decoration:underline;
+    }
+}
+
+* {
+    &:focus {
+        outline:none !important;
+    }
+}

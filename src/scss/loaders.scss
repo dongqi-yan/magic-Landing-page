@@ -1,0 +1,31 @@
+.ax-loader {
+    display:inline;
+
+    &_overlay {
+        position:fixed;
+        left:0;
+        top:0;
+        right:0;
+        bottom:0;
+        height:100%;
+        width:100%;
+        overflow:hidden;
+        z-index:999;
+        max-width:0;
+
+        background:$color-fill;
+        opacity:0;
+
+        pointer-events:none;
+        transition:opacity 1s 0.3s, max-width 0s 1.3s;
+        transform-origin:center bottom;
+
+        &.-visible {
+            max-width:100%;
+            pointer-events:auto;
+            opacity:1;
+            transition-delay:0s, 0s;
+            transition-duration:0.3s, 0s;
+        }
+    }
+}

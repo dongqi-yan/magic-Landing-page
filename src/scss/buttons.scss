@@ -1,0 +1,225 @@
+.ax-btn {
+    $root:&;
+
+    &_flat {
+        position:relative;
+        display:inline-block;
+        height:37px;
+        margin:0;
+        padding:0 21px;
+        text-align:center;
+        overflow:hidden;
+
+        color:$color-base;
+        background:$color-primary;
+        border:0;
+        outline:none;
+
+        font-family:$font-family-secondary;
+        font-size:12px;
+        font-weight:bold;
+        line-height:1;
+
+        @media (min-width:$screen-ul-min) {
+            padding:0 25px;
+            height:44px;
+            font-size:14px;
+        }
+
+        &:after {
+            content:"";
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            transform:scaleY(0);
+            transform-origin:bottom center;
+
+            background:mix($color-primary, $color-secondary, 50%);
+
+            transition:transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        span {
+            position:relative;
+            z-index:1;
+            transition:color 0.2s;
+        }
+
+        &:hover {
+            span {
+                color:$color-text;
+            }
+
+            &:after {
+                transform:scaleY(1);
+                transform-origin:top center;
+            }
+        }
+
+        &:active {
+            opacity:0.9;
+        }
+
+        &.-lg {
+            min-width:140px;
+
+            @media (min-width:$screen-xl-min) {
+                height:59px;
+                min-width:200px;
+                font-size:18px;
+            }
+        }
+
+        &.-transparent {
+            background:none;
+
+            &:after {
+                opacity:0.3;
+            }
+        }
+    }
+
+    &_sign {
+        position:relative;
+        display:inline-block;
+        padding:0 0 10px 0;
+
+        color:$color-primary;
+        background:none;
+        border:0;
+        outline:none;
+
+        font-family:$font-family-secondary;
+        font-size:12px;
+        font-weight:bold;
+        vertical-align:middle;
+
+        &:after {
+            content:"";
+            display:block;
+            position:absolute;
+            left:0;
+            right:0;
+            bottom:0;
+            height:2px;
+
+            background:linear-gradient(to right, $color-primary, $color-secondary);
+            backface-visibility:hidden;
+
+            transition:all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        &.-ml {
+            font-size:16px;
+
+            @media (min-width:$screen-sm-min) {
+                padding:0 0 13px 0;
+            }
+        }
+
+        &.-lg {
+            padding:0 0 9px 0;
+
+            font-size:14px;
+            font-weight:normal;
+
+            @media (min-width:$screen-sm-min) {
+                padding:0 0 7px 0;
+                font-size:18px;
+            }
+        }
+
+        &:hover, &:focus {
+            color:$color-primary;
+            text-decoration:none;
+
+            &:after {
+                transform:scaleX(0.8);
+            }
+        }
+    }
+
+    &_clean {
+        position:relative;
+        display:inline-block;
+        padding:0;
+        margin:0;
+
+        color:$color-primary;
+        background:none;
+        border:0;
+        outline:none;
+        box-shadow:none;
+
+        font-size:18px;
+        line-height:1;
+        vertical-align:middle;
+
+        &:after {
+            content:"";
+            display:block;
+            position:absolute;
+            top:-12px;
+            left:-12px;
+            right:-12px;
+            bottom:-12px;
+        }
+
+        > * {
+            transition:transform 0.2s;
+        }
+
+        &:hover, &:focus {
+            > * {
+                transform:translateX(5px);
+            }
+        }
+    }
+
+    &_close {
+        position:relative;
+        display:inline-block;
+        padding:0;
+        margin:0;
+
+        color:$color-primary;
+        background:none;
+        border:0;
+        outline:none;
+        box-shadow:none;
+
+        font-size:20px;
+        line-height:1;
+        vertical-align:middle;
+
+        @media (min-width:$screen-sm-min) {
+            font-size:25px;
+        }
+
+        @media (min-width:$screen-xl-min) {
+            font-size:30px;
+        }
+
+        &:after {
+            content:"";
+            display:block;
+            position:absolute;
+            top:-12px;
+            left:-12px;
+            right:-12px;
+            bottom:-12px;
+        }
+
+        svg {
+            transition:transform 0.2s;
+        }
+
+        &:hover, &:focus {
+            svg {
+                transform:scale(0.8);
+            }
+        }
+    }
+}

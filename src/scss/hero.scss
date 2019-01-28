@@ -1,0 +1,199 @@
+.ax-hero {
+    $root:&;
+
+    position:relative;
+    overflow:hidden;
+
+    &-wrap {
+        height:100vh;
+        min-height:550px;
+
+        @media (min-width:$screen-sm-min) {
+            min-height:700px;
+        }
+    }
+
+    &-container {
+        @extend .ax-container.-lg;
+        height:100%;
+    }
+
+    &-bg {
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        z-index:0;
+        overflow:hidden;
+        min-height:680px;
+
+        background-color:#121212;
+        perspective:100px;
+
+        @media (min-width:$screen-sm-min) {
+            min-height:900px;
+        }
+
+        @media (min-width:$screen-ml-min) {
+            min-height:1065px;
+        }
+
+        @media (min-width:$screen-ul-min) {
+            min-height:1160px;
+        }
+
+        &-img {
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+
+            opacity:0.8;
+            background-image:url(../img/hero/bg.png);
+            background-size:900px;
+            background-repeat:no-repeat;
+            background-position:center bottom;
+            backface-visibility:hidden;
+
+            will-change:transform, opacity;
+
+            @media (min-width:$screen-sm-min) {
+                opacity:1;
+                background-size:1200px;
+                background-position:center bottom;
+            }
+
+            @media (min-width:$screen-ml-min) {
+                background-size:1550px;
+                margin:0 0 0 -40px;
+            }
+
+            @media (min-width:$screen-ul-min) {
+                background-size:1600px;
+            }
+        }
+
+        &-ref {
+            @extend .ax-container.-lg;
+
+            position:absolute;
+            left:0;
+            right:0;
+            bottom:340px;
+            transform:translateZ(0);
+
+            @media (min-width:$screen-sm-min) {
+                bottom:380px;
+            }
+
+            @media (min-width:$screen-ml-min) {
+                bottom:490px;
+            }
+
+            &-row {
+                font-family:$font-family-secondary;
+                font-size:11px;
+                font-weight:300;
+
+                @media (min-width:$screen-sm-min) {
+                    padding:7px 0 9px 0;
+                    font-size:12px;
+                }
+
+                @media (min-width:$screen-ml-min) {
+                    font-size:14px;
+                }
+
+                @media (min-width:$screen-ul-min) {
+                    padding:9px 0 13px 0;
+                    font-size:16px;
+                }
+
+                img {
+                    margin:-7px 0 0 3px;
+                    max-width:75px;
+                    vertical-align:middle;
+
+                    @media (min-width:$screen-sm-min) {
+                        margin:-8px 0 0 7px;
+                        max-width:100px;
+                    }
+
+                    @media (min-width:$screen-ml-min) {
+                        max-width:105px;
+                    }
+
+                    @media (min-width:$screen-ul-min) {
+                        margin:-9px 0 0 8px;
+                        max-width:125px;
+                    }
+                }
+
+                b {
+                    font-weight:500;
+                }
+
+                &.-bottom {
+                    max-width:110px;
+
+                    @media (min-width:$screen-sm-min) {
+                        max-width:none;
+                    }
+                }
+            }
+
+            &-hr {
+                display:none;
+
+                @media (min-width:$screen-sm-min) {
+                    display:block;
+                    max-width:40%;
+                    height:1px;
+                    transform-origin:left center;
+                    will-change:transform;
+
+                    background:linear-gradient(to right, $color-base, rgba($color-base, 0));
+                }
+            }
+        }
+    }
+
+    &-body {
+        position:relative;
+        height:100%;
+        z-index:1;
+        padding:80px 0 0 0;
+        text-align:center;
+
+        @media (min-width:$screen-sm-min) {
+            padding:130px 0 0 0;
+        }
+
+        @media (min-width:$screen-ul-min) {
+            padding:165px 0 0 0;
+        }
+    }
+
+    &-header {
+        max-width:220px;
+        margin:0 auto;
+
+        @media (min-width:$screen-sm-min) {
+            max-width:none;
+        }
+    }
+
+    &-more {
+        margin:20px 0 0 0;
+
+        @media (min-width:$screen-sm-min) {
+            margin:40px 0 0 0;
+        }
+
+        @media (min-width:$screen-ul-min) {
+            margin:53px 0 0 0;
+        }
+    }
+}

@@ -1,0 +1,172 @@
+.ax-nav {
+    display:inline-block;
+
+    &_scroll {
+        $this:&;
+
+        display:none;
+        pointer-events:none;
+        user-select:none;
+
+        @media (min-width:$screen-sm-min) {
+            display:flex;
+            position:fixed;
+            top:0;
+            right:20px;
+            bottom:0;
+            z-index:99;
+            align-items:center;
+            transition:all 1s;
+        }
+
+        @media (min-width:$screen-lg-min) {
+            right:30px;
+        }
+
+        @media (min-width:$screen-xl-min) {
+            right:60px;
+        }
+
+        &-inner {
+            position:relative;
+            overflow:hidden;
+            clip-path:polygon(0 0, 100% 0%, 100% 0, 0 0);
+            transition:clip-path 1s ease-in-out;
+        }
+
+        &-track {
+            position:absolute;
+            top:0;
+            right:0;
+            bottom:0;
+            z-index:1;
+            overflow:hidden;
+            height:0;
+
+            transition:height 1s;
+
+            span {
+                display:block;
+                padding:4px 0;
+
+                @media (min-width:$screen-xl-min) {
+                    padding:5px 0;
+                }
+
+                &:before {
+                    content:"";
+                    display:inline-block;
+                    width:2px;
+                    height:40px;
+                    vertical-align:middle;
+
+                    background:$color-primary;
+
+                    @media (min-width:$screen-xl-min) {
+                        height:55px;
+                    }
+                }
+            }
+
+            @for $i from 1 through 9 {
+                &.-active-#{$i} {
+                    height:48px * $i;
+
+                    @media (min-width:$screen-xl-min) {
+                        height:65px * $i;
+                    }
+                }
+            }
+        }
+
+        &-item {
+            display:block;
+            padding:4px 0;
+            pointer-events:auto;
+
+            @media (min-width:$screen-xl-min) {
+                padding:5px 0;
+            }
+
+            &:after {
+                content:"";
+                display:inline-block;
+                width:1px;
+                height:40px;
+                vertical-align:middle;
+
+                background:rgba($color-base, 0.4);
+
+                transition:background 0.3s;
+
+                @media (min-width:$screen-xl-min) {
+                    height:55px;
+                }
+            }
+
+            > span {
+                display:inline-block;
+                margin:0 9px;
+                overflow:hidden;
+
+                font-size:12px;
+                font-weight:bold;
+                vertical-align:middle;
+
+                @media (min-width:$screen-xl-min) {
+                    margin:0 14px;
+                    font-size:15px;
+                }
+
+                > span {
+                    display:block;
+
+                    color:$color-primary;
+
+                    transform:translateY(-120%);
+                    transition:transform 0.6s;
+                }
+            }
+
+            &:hover {
+                &:after {
+                    background:rgba($color-base, 0.6);
+                }
+            }
+
+            &:active {
+                &:after {
+                    background:rgba($color-base, 0.7);
+                }
+            }
+        }
+
+        &.-visible {
+            #{$this} {
+                &-inner {
+                    clip-path:polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+                }
+
+                &-item {
+                    &.-active {
+                        > span > span {
+                            transform:translateY(0);
+                            animation:ax-nav_scroll-num-show 0.6s 0.15s backwards;
+                            transition-duration:0s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes ax-nav_scroll-num-show {
+    0% {
+        transform:translateY(120%);
+    }
+
+    100% {
+        transform:translateY(0);
+    }
+}

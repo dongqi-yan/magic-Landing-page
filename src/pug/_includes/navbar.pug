@@ -1,0 +1,30 @@
+mixin navbar(options)
+    nav.ax-navbar&attributes(attributes)
+        .ax-navbar-strip
+            .ax-navbar-container
+                .ax-navbar-grid
+                    .ax-navbar-grid-col.-left
+                        .ax-navbar-logo: a(href="/"): +svgsprite('aax')
+                    .ax-navbar-grid-col.-right
+                        .ax-navbar-lang
+                            .ax-dropdown.ax-dropdown_select(tabindex="0")
+                                .ax-dropdown_select-toggle
+                                    .ax-dropdown_select-toggle-text EN
+                                    .ax-dropdown_select-toggle-arr: +svgsprite('chevron-down')
+                                .ax-dropdown_select-menu.-aright
+                                    .ax-dropdown_select-menu-item(data-short="CH") Traditional Chinese
+                                    .ax-dropdown_select-menu-item(data-short="CH") Simplified Chinese
+                                    .ax-dropdown_select-menu-item(data-short="KRN") Korean
+                                    .ax-dropdown_select-menu-item(data-short="RUS") Russian
+                                    .ax-dropdown_select-menu-item(data-short="SP") Spanish
+                                    .ax-dropdown_select-menu-item(data-short="FRN") French
+                                    .ax-dropdown_select-menu-item(data-short="GRN") German
+                                    .ax-dropdown_select-menu-item(data-short="VTN") Vietnamese
+                                    .ax-dropdown_select-menu-item(data-short="TRK") Turkish
+                                    .ax-dropdown_select-menu-item(data-short="DTC") Dutch
+                                    .ax-dropdown_select-menu-item(data-short="PRT") Portuguese
+                                    .ax-dropdown_select-menu-item(data-short="ITL") Italian
+                        .ax-navbar-action
+                            .ax-navbar-action-signup
+                                button.ax-btn.ax-btn_sign
+                                    span !{__.navbar.access}

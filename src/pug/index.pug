@@ -1,0 +1,602 @@
+extends /_includes/layout
+
+block title
+    title AAX
+
+block content
+    +navbar
+
+    .ax-view(data-controller="homeController")#view-main
+
+        main.ax-content(role="main")
+
+            article.ax-home
+
+                header.ax-hero(data-section="1")
+                    .ax-hero-wrap
+                        .ax-hero-container
+                            .ax-hero-body
+                                .ax-hero-header
+                                    .ax-header
+                                        h1
+                                            b !{__.home.hero.header[0]}
+                                            br
+                                            em !{__.home.hero.header[1]}
+                                .ax-hero-more
+                                    button.ax-btn.ax-btn_flat
+                                        span !{__.navbar.access}
+                            .ax-hero-bg
+                                .ax-hero-bg-img
+                                .ax-hero-bg-ref
+                                    .ax-hero-bg-ref-row.-top !{__.home.hero.powered[0]}
+                                    .ax-hero-bg-ref-hr
+                                    .ax-hero-bg-ref-row.-bottom !{__.home.hero.powered[1]}
+
+                section.ax-brief
+                    .ax-brief-wrap
+                        .ax-brief-container
+                            .ax-brief-grid
+                                .ax-brief-grid-col.-left
+                                    .ax-brief-header
+                                        .ax-header
+                                            h2
+                                                b !{__.home.brief.header[0]}
+                                                br
+                                                em !{__.home.brief.header[1]}
+                                .ax-brief-grid-col.-right
+                                    .ax-brief-text
+                                        each t in __.home.brief.text
+                                            p !{t}
+
+                section.ax-spec(data-section="2")
+                    .ax-spec-wrap
+                        .ax-spec-container
+                            .ax-spec-header
+                                .ax-header
+                                    h2
+                                        b !{__.home.spec.header[0]}
+                                        br
+                                        em !{__.home.spec.header[1]}
+                            .ax-spec-body
+                                .ax-spec-grid.-top
+                                    .ax-spec-grid-col
+                                        .ax-spec-feature
+                                            .ax-spec-feature-caption #{__.home.spec.feature[0].caption}
+                                            .ax-spec-feature-header
+                                                .ax-header.-xs
+                                                    h3
+                                                        b !{__.home.spec.feature[0].header[0]}
+                                                        br
+                                                        em !{__.home.spec.feature[0].header[1]}
+                                            .ax-spec-feature-line
+                                    .ax-spec-grid-col
+                                        .ax-spec-feature
+                                            .ax-spec-feature-caption #{__.home.spec.feature[1].caption}
+                                            .ax-spec-feature-header
+                                                .ax-header.-xs
+                                                    h3
+                                                        b !{__.home.spec.feature[1].header[0]}
+                                                        br
+                                                        em !{__.home.spec.feature[1].header[1]}
+                                            .ax-spec-feature-line
+                                .ax-spec-phone
+                                    .ax-spec-phone-depth
+                                        .ax-spec-phone-img.-sm
+                                            img(src="/assets/img/spec/phone-sm.png", srcset="/assets/img/spec/phone-sm@2x.png 2x", alt)
+                                        .ax-spec-phone-img.-lg
+                                            img(src="/assets/img/spec/phone.png", srcset="/assets/img/spec/phone@2x.png 2x", alt)
+                                .ax-spec-grid.-bottom
+                                    .ax-spec-grid-col
+                                        .ax-spec-feature
+                                            .ax-spec-feature-line.-bottom
+                                            .ax-spec-feature-caption !{__.home.spec.feature[2].caption}
+                                            .ax-spec-feature-num(title="2.000.00")
+                                                .ax-spec-feature-num-digit(style="transform: translate(0%, -20%)")
+                                                    - for(var i = 0; i < 10; i++)
+                                                        span=i
+                                                .ax-spec-feature-num-dot ,
+                                                .ax-spec-feature-num-digit
+                                                    - for(var i = 0; i < 10; i++)
+                                                        span=i
+                                                .ax-spec-feature-num-digit
+                                                    - for(var i = 0; i < 10; i++)
+                                                        span=i
+                                                .ax-spec-feature-num-digit
+                                                    - for(var i = 0; i < 10; i++)
+                                                        span=i
+                                                .ax-spec-feature-num-dot ,
+                                                .ax-spec-feature-num-digit
+                                                    - for(var i = 0; i < 10; i++)
+                                                        span=i
+                                                .ax-spec-feature-num-digit
+                                                    - for(var i = 0; i < 10; i++)
+                                                        span=i
+                                                .ax-spec-feature-num-digit
+                                                    - for(var i = 0; i < 10; i++)
+                                                        span=i
+                                            .ax-spec-feature-val !{__.home.spec.feature[2].val}
+                                    .ax-spec-grid-col
+                                        .ax-spec-feature
+                                            .ax-spec-feature-line.-bottom
+                                            .ax-spec-feature-caption !{__.home.spec.feature[3].caption}
+                                            .ax-spec-feature-num(title="0.0001")
+                                                .ax-spec-feature-num-digit
+                                                    - for(var i = 0; i < 10; i++)
+                                                        span=i
+                                                .ax-spec-feature-num-dot .
+                                                .ax-spec-feature-num-digit
+                                                    - for(var i = 0; i < 10; i++)
+                                                        span=i
+                                                .ax-spec-feature-num-digit
+                                                    - for(var i = 0; i < 10; i++)
+                                                        span=i
+                                                .ax-spec-feature-num-digit
+                                                    - for(var i = 0; i < 10; i++)
+                                                        span=i
+                                                .ax-spec-feature-num-digit(style="transform: translate(0%, -10%)")
+                                                    - for(var i = 0; i < 10; i++)
+                                                        span=i
+                                            .ax-spec-feature-val !{__.home.spec.feature[3].val}
+                                    .ax-spec-grid-col
+                                        .ax-spec-feature
+                                            .ax-spec-feature-line.-bottom
+                                            .ax-spec-feature-caption !{__.home.spec.feature[4].caption}
+                                            .ax-spec-feature-num(title="99.999")
+                                                .ax-spec-feature-num-digit(style="transform: translate(0%, -90%)")
+                                                    - for(var i = 0; i < 10; i++)
+                                                        span=i
+                                                .ax-spec-feature-num-digit(style="transform: translate(0%, -90%)")
+                                                    - for(var i = 0; i < 10; i++)
+                                                        span=i
+                                                .ax-spec-feature-num-dot .
+                                                .ax-spec-feature-num-digit(style="transform: translate(0%, -90%)")
+                                                    - for(var i = 0; i < 10; i++)
+                                                        span=i
+                                                .ax-spec-feature-num-digit(style="transform: translate(0%, -90%)")
+                                                    - for(var i = 0; i < 10; i++)
+                                                        span=i
+                                                .ax-spec-feature-num-digit(style="transform: translate(0%, -90%)")
+                                                    - for(var i = 0; i < 10; i++)
+                                                        span=i
+                                            .ax-spec-feature-val !{__.home.spec.feature[4].val}
+
+                section.ax-preview
+                    .ax-preview-wrap
+                        .ax-preview-container
+                            .ax-preview-img
+                                img(src="/assets/img/preview/laptop.png", alt)
+                                .ax-preview-img-parts
+                                    img(src="/assets/img/preview/parts/1.png", alt)
+                                    img(src="/assets/img/preview/parts/2.png", alt)
+                                    img(src="/assets/img/preview/parts/3.png", alt)
+                                    img(src="/assets/img/preview/parts/4.png", alt)
+                                    img(src="/assets/img/preview/parts/5.png", alt)
+
+                section.ax-feature(data-section="3")
+                    .ax-feature-wrap.-double
+                        .ax-feature-container
+                            .ax-feature-grid
+                                .ax-feature-grid-col.-left
+                                    .ax-feature-header
+                                        .ax-header
+                                            h2
+                                                b !{__.home.feature.header[0]}
+                                                br
+                                                em !{__.home.feature.header[1]}
+                                .ax-feature-grid-col.-right
+                                    .ax-feature-list
+                                        .ax-feature-list-item
+                                            .ax-feature-list-item-grid
+                                                .ax-feature-list-item-grid-col.-left
+                                                    .ax-feature-list-item-ico
+                                                        img(src="/assets/img/feature/icons/1.png", srcset="/assets/img/feature/icons/1@2x.png 2x", alt)
+                                                .ax-feature-list-item-grid-col.-right
+                                                    .ax-feature-list-item-header
+                                                        .ax-header.-md
+                                                            h3
+                                                                strong !{__.home.feature.list[0].header[0]}
+                                                                br
+                                                                em !{__.home.feature.list[0].header[1]}
+                                                    .ax-feature-list-item-text
+                                                        each t in __.home.feature.list[0].text
+                                                            p !{t}
+                                        .ax-feature-list-item
+                                            .ax-feature-list-item-grid
+                                                .ax-feature-list-item-grid-col.-left
+                                                    .ax-feature-list-item-ico
+                                                        img(src="/assets/img/feature/icons/2.png", srcset="/assets/img/feature/icons/2@2x.png 2x", alt)
+                                                .ax-feature-list-item-grid-col.-right
+                                                    .ax-feature-list-item-header
+                                                        .ax-header.-md
+                                                            h3
+                                                                strong !{__.home.feature.list[1].header[0]}
+                                                                br
+                                                                em !{__.home.feature.list[1].header[1]}
+                                                    .ax-feature-list-item-text
+                                                        each t in __.home.feature.list[1].text
+                                                            p !{t}
+                                        .ax-feature-list-item
+                                            .ax-feature-list-item-grid
+                                                .ax-feature-list-item-grid-col.-left
+                                                    .ax-feature-list-item-ico
+                                                        img(src="/assets/img/feature/icons/3.png", srcset="/assets/img/feature/icons/3@2x.png 2x", alt)
+                                                .ax-feature-list-item-grid-col.-right
+                                                    .ax-feature-list-item-header
+                                                        .ax-header.-md
+                                                            h3
+                                                                strong !{__.home.feature.list[2].header[0]}
+                                                                br
+                                                                em !{__.home.feature.list[2].header[1]}
+                                                    .ax-feature-list-item-text
+                                                        each t in __.home.feature.list[2].text
+                                                            p !{t}
+                                        .ax-feature-list-item
+                                            .ax-feature-list-item-grid
+                                                .ax-feature-list-item-grid-col.-left
+                                                    .ax-feature-list-item-ico
+                                                        img(src="/assets/img/feature/icons/4.png", srcset="/assets/img/feature/icons/4@2x.png 2x", alt)
+                                                .ax-feature-list-item-grid-col.-right
+                                                    .ax-feature-list-item-header
+                                                        .ax-header.-md
+                                                            h3
+                                                                strong !{__.home.feature.list[3].header[0]}
+                                                                br
+                                                                em !{__.home.feature.list[3].header[1]}
+                                                    if(__.home.feature.list[3].text)
+                                                        .ax-feature-list-item-text
+                                                            each t in __.home.feature.list[3].text
+                                                                p !{t}
+                                                    if(__.home.feature.list[3].link)
+                                                        .ax-feature-list-item-more
+                                                            button.ax-btn.ax-btn_sign
+                                                                span !{__.home.feature.list[3].link}
+
+                section.ax-showcase-cutout(data-section="4")
+
+                section.ax-footnote.-spaced(data-section="5")
+                    .ax-footnote-wrap
+                        .ax-footnote-container
+                            .ax-footnote-grid
+                                .ax-footnote-grid-col.-left
+                                    .ax-footnote-header
+                                        .ax-header
+                                            h2
+                                                b !{__.home.footnote.header[0]}
+                                                br
+                                                em !{__.home.footnote.header[1]}
+                                    .ax-footnote-text
+                                        img(src="/assets/img/logo/kroll.png", srcset="/assets/img/logo/kroll@2x.png 2x", alt="Kroll")
+                                        each t in __.home.footnote.text
+                                            p !{t}
+                                .ax-footnote-grid-col.-right
+                                    .ax-footnote-title
+                                        .ax-header.-sm
+                                            h3
+                                                b !{__.home.footnote.title[0]}
+                                                br
+                                                em !{__.home.footnote.title[1]}
+                                    .ax-footnote-caption !{__.home.footnote.caption}
+                                    .ax-footnote-name
+                                        .ax-footnote-name-grid
+                                            .ax-footnote-name-grid-col.-left
+                                                .ax-footnote-name-photo(style="background-image:url(/assets/img/team/0.jpg)")
+                                            .ax-footnote-name-grid-col.-right
+                                                .ax-footnote-name-top
+                                                    .ax-footnote-name-title !{__.home.footnote.name.title}
+                                                    .ax-footnote-name-text
+                                                        each t in __.home.footnote.name.text
+                                                            p !{t}
+                                                .ax-footnote-name-bottom
+                                                    .ax-footnote-name-more
+                                                        .ax-tooltip.-hover
+                                                            .ax-tooltip-handle
+                                                                button.ax-btn.ax-btn_sign
+                                                                    span !{__.home.footnote.name.more}
+                                                            .ax-tooltip-content.-xl(tabindex="-1")
+                                                                each t in __.home.footnote.name.tooltip
+                                                                    p !{t}
+
+                section.ax-team.-overbottom
+                    .ax-team-wrap
+                        .ax-team-container
+                            .ax-team-carousel
+                                .ax-team-carousel-nav
+                                    .ax-team-carousel-nav-header
+                                        .ax-header
+                                            h2
+                                                b !{__.home.team.header[0]}
+                                                br
+                                                em !{__.home.team.header[1]}
+                                    .ax-team-carousel-nav-control
+                                        a.ax-team-carousel-nav-control-item.-prev.-disabled(role="button"): +svgsprite('chevron-left')
+                                        a.ax-team-carousel-nav-control-item.-next(role="button"): +svgsprite('chevron-right')
+                                .ax-team-carousel-items
+                                    .ax-team-carousel-row.-top
+                                        .ax-team-carousel-item.-cap
+                                        .ax-team-carousel-item
+                                            .ax-team-carousel-item-img(style="background-image:url(/assets/img/team/1.jpg)")
+                                            .ax-team-carousel-item-info
+                                                .ax-team-carousel-item-info-top
+                                                    .ax-team-carousel-item-info-title !{__.home.team.items[1].title}
+                                                    .ax-team-carousel-item-info-text
+                                                        each t in __.home.team.items[1].text
+                                                            p !{t}
+                                                .ax-team-carousel-item-info-bottom
+                                                    .ax-team-carousel-item-info-name !{__.home.team.items[1].name}
+                                        .ax-team-carousel-item
+                                            .ax-team-carousel-item-img(style="background-image:url(/assets/img/team/2.jpg)")
+                                            .ax-team-carousel-item-info
+                                                .ax-team-carousel-item-info-top
+                                                    .ax-team-carousel-item-info-title !{__.home.team.items[2].title}
+                                                    .ax-team-carousel-item-info-text
+                                                        each t in __.home.team.items[2].text
+                                                            p !{t}
+                                                .ax-team-carousel-item-info-bottom
+                                                    .ax-team-carousel-item-info-name !{__.home.team.items[2].name}
+                                        .ax-team-carousel-item
+                                            .ax-team-carousel-item-img(style="background-image:url(/assets/img/team/3.jpg)")
+                                            .ax-team-carousel-item-info
+                                                .ax-team-carousel-item-info-top
+                                                    .ax-team-carousel-item-info-title !{__.home.team.items[3].title}
+                                                    .ax-team-carousel-item-info-text
+                                                        each t in __.home.team.items[3].text
+                                                            p !{t}
+                                                .ax-team-carousel-item-info-bottom
+                                                    .ax-team-carousel-item-info-name !{__.home.team.items[3].name}
+                                        .ax-team-carousel-item
+                                            .ax-team-carousel-item-img(style="background-image:url(/assets/img/team/4.jpg)")
+                                            .ax-team-carousel-item-info
+                                                .ax-team-carousel-item-info-top
+                                                    .ax-team-carousel-item-info-title !{__.home.team.items[4].title}
+                                                    .ax-team-carousel-item-info-text
+                                                        each t in __.home.team.items[4].text
+                                                            p !{t}
+                                                .ax-team-carousel-item-info-bottom
+                                                    .ax-team-carousel-item-info-name !{__.home.team.items[4].name}
+                                        .ax-team-carousel-item
+                                            .ax-team-carousel-item-img(style="background-image:url(/assets/img/team/5.jpg)")
+                                            .ax-team-carousel-item-info
+                                                .ax-team-carousel-item-info-top
+                                                    .ax-team-carousel-item-info-title !{__.home.team.items[5].title}
+                                                    .ax-team-carousel-item-info-text
+                                                        each t in __.home.team.items[5].text
+                                                            p !{t}
+                                                .ax-team-carousel-item-info-bottom
+                                                    .ax-team-carousel-item-info-name !{__.home.team.items[5].name}
+                                        .ax-team-carousel-item
+                                            .ax-team-carousel-item-img(style="background-image:url(/assets/img/team/6.jpg)")
+                                            .ax-team-carousel-item-info
+                                                .ax-team-carousel-item-info-top
+                                                    .ax-team-carousel-item-info-title !{__.home.team.items[6].title}
+                                                    .ax-team-carousel-item-info-text
+                                                        each t in __.home.team.items[6].text
+                                                            p !{t}
+                                                .ax-team-carousel-item-info-bottom
+                                                    .ax-team-carousel-item-info-name !{__.home.team.items[6].name}
+                                        .ax-team-carousel-item.-clone
+                                            .ax-team-carousel-item-img(style="background-image:url(/assets/img/team/7.jpg)")
+                                            .ax-team-carousel-item-info
+                                                .ax-team-carousel-item-info-top
+                                                    .ax-team-carousel-item-info-title !{__.home.team.items[7].title}
+                                                    .ax-team-carousel-item-info-text
+                                                        each t in __.home.team.items[7].text
+                                                            p !{t}
+                                                .ax-team-carousel-item-info-bottom
+                                                    .ax-team-carousel-item-info-name !{__.home.team.items[7].name}
+                                        .ax-team-carousel-item.-clone
+                                            .ax-team-carousel-item-img(style="background-image:url(/assets/img/team/8.jpg)")
+                                            .ax-team-carousel-item-info
+                                                .ax-team-carousel-item-info-top
+                                                    .ax-team-carousel-item-info-title !{__.home.team.items[8].title}
+                                                    .ax-team-carousel-item-info-text
+                                                        each t in __.home.team.items[8].text
+                                                            p !{t}
+                                                .ax-team-carousel-item-info-bottom
+                                                    .ax-team-carousel-item-info-name !{__.home.team.items[8].name}
+                                        .ax-team-carousel-item.-clone
+                                            .ax-team-carousel-item-img(style="background-image:url(/assets/img/team/9.jpg)")
+                                            .ax-team-carousel-item-info
+                                                .ax-team-carousel-item-info-top
+                                                    .ax-team-carousel-item-info-title !{__.home.team.items[9].title}
+                                                    .ax-team-carousel-item-info-text
+                                                        each t in __.home.team.items[9].text
+                                                            p !{t}
+                                                .ax-team-carousel-item-info-bottom
+                                                    .ax-team-carousel-item-info-name !{__.home.team.items[9].name}
+                                        .ax-team-carousel-item.-clone
+                                            .ax-team-carousel-item-img(style="background-image:url(/assets/img/team/10.jpg)")
+                                            .ax-team-carousel-item-info
+                                                .ax-team-carousel-item-info-top
+                                                    .ax-team-carousel-item-info-title !{__.home.team.items[10].title}
+                                                    .ax-team-carousel-item-info-text
+                                                        each t in __.home.team.items[10].text
+                                                            p !{t}
+                                                .ax-team-carousel-item-info-bottom
+                                                    .ax-team-carousel-item-info-name !{__.home.team.items[10].name}
+                                        .ax-team-carousel-item.-clone
+                                            .ax-team-carousel-item-img(style="background-image:url(/assets/img/team/11.jpg)")
+                                            .ax-team-carousel-item-info
+                                                .ax-team-carousel-item-info-top
+                                                    .ax-team-carousel-item-info-title !{__.home.team.items[11].title}
+                                                    .ax-team-carousel-item-info-text
+                                                        each t in __.home.team.items[11].text
+                                                            p !{t}
+                                                .ax-team-carousel-item-info-bottom
+                                                    .ax-team-carousel-item-info-name !{__.home.team.items[11].name}
+                                        .ax-team-carousel-item.-clone
+                                            .ax-team-carousel-item-img(style="background-image:url(/assets/img/team/12.jpg)")
+                                            .ax-team-carousel-item-info
+                                                .ax-team-carousel-item-info-top
+                                                    .ax-team-carousel-item-info-title !{__.home.team.items[12].title}
+                                                    .ax-team-carousel-item-info-text
+                                                        each t in __.home.team.items[12].text
+                                                            p !{t}
+                                                .ax-team-carousel-item-info-bottom
+                                                    .ax-team-carousel-item-info-name !{__.home.team.items[12].name}
+                                    .ax-team-carousel-row.-bottom
+                                        .ax-team-carousel-item
+                                            .ax-team-carousel-item-img(style="background-image:url(/assets/img/team/7.jpg)")
+                                            .ax-team-carousel-item-info
+                                                .ax-team-carousel-item-info-top
+                                                    .ax-team-carousel-item-info-title !{__.home.team.items[7].title}
+                                                    .ax-team-carousel-item-info-text
+                                                        each t in __.home.team.items[7].text
+                                                            p !{t}
+                                                .ax-team-carousel-item-info-bottom
+                                                    .ax-team-carousel-item-info-name !{__.home.team.items[7].name}
+                                        .ax-team-carousel-item
+                                            .ax-team-carousel-item-img(style="background-image:url(/assets/img/team/8.jpg)")
+                                            .ax-team-carousel-item-info
+                                                .ax-team-carousel-item-info-top
+                                                    .ax-team-carousel-item-info-title !{__.home.team.items[8].title}
+                                                    .ax-team-carousel-item-info-text
+                                                        each t in __.home.team.items[8].text
+                                                            p !{t}
+                                                .ax-team-carousel-item-info-bottom
+                                                    .ax-team-carousel-item-info-name !{__.home.team.items[8].name}
+                                        .ax-team-carousel-item
+                                            .ax-team-carousel-item-img(style="background-image:url(/assets/img/team/9.jpg)")
+                                            .ax-team-carousel-item-info
+                                                .ax-team-carousel-item-info-top
+                                                    .ax-team-carousel-item-info-title !{__.home.team.items[9].title}
+                                                    .ax-team-carousel-item-info-text
+                                                        each t in __.home.team.items[9].text
+                                                            p !{t}
+                                                .ax-team-carousel-item-info-bottom
+                                                    .ax-team-carousel-item-info-name !{__.home.team.items[9].name}
+                                        .ax-team-carousel-item
+                                            .ax-team-carousel-item-img(style="background-image:url(/assets/img/team/10.jpg)")
+                                            .ax-team-carousel-item-info
+                                                .ax-team-carousel-item-info-top
+                                                    .ax-team-carousel-item-info-title !{__.home.team.items[10].title}
+                                                    .ax-team-carousel-item-info-text
+                                                        each t in __.home.team.items[10].text
+                                                            p !{t}
+                                                .ax-team-carousel-item-info-bottom
+                                                    .ax-team-carousel-item-info-name !{__.home.team.items[10].name}
+                                        .ax-team-carousel-item
+                                            .ax-team-carousel-item-img(style="background-image:url(/assets/img/team/11.jpg)")
+                                            .ax-team-carousel-item-info
+                                                .ax-team-carousel-item-info-top
+                                                    .ax-team-carousel-item-info-title !{__.home.team.items[11].title}
+                                                    .ax-team-carousel-item-info-text
+                                                        each t in __.home.team.items[11].text
+                                                            p !{t}
+                                                .ax-team-carousel-item-info-bottom
+                                                    .ax-team-carousel-item-info-name !{__.home.team.items[11].name}
+                                        .ax-team-carousel-item
+                                            .ax-team-carousel-item-img(style="background-image:url(/assets/img/team/12.jpg)")
+                                            .ax-team-carousel-item-info
+                                                .ax-team-carousel-item-info-top
+                                                    .ax-team-carousel-item-info-title !{__.home.team.items[12].title}
+                                                    .ax-team-carousel-item-info-text
+                                                        each t in __.home.team.items[12].text
+                                                            p !{t}
+                                                .ax-team-carousel-item-info-bottom
+                                                    .ax-team-carousel-item-info-name !{__.home.team.items[12].name}
+                                        .ax-team-carousel-item.-cap
+                                .ax-team-carousel-info
+                                    p !{__.home.team.info}
+                                .ax-team-carousel-rect
+
+                section.ax-outro
+                    .ax-outro-wrap
+                        .ax-outro-container
+                            .ax-outro-quot
+                                .ax-outro-quot-text
+                                    each t in __.home.outro.text
+                                        p !{t}
+                                .ax-outro-quot-photo(style="background-image:url(/assets/img/team/3.jpg)")
+                                .ax-outro-quot-name
+                                    strong !{__.home.outro.name}
+                                    span , !{__.home.outro.title}
+
+                section.ax-outro
+                    .ax-outro-wrap
+                        .ax-outro-container
+                            .ax-outro-quot
+                                .ax-outro-quot-text
+                                    each t in __.home.outro2.text
+                                        p !{t}
+                                .ax-outro-quot-photo(style="background-image:url(/assets/img/team/1.jpg)")
+                                .ax-outro-quot-name
+                                    strong !{__.home.outro2.name}
+                                    span , !{__.home.outro2.title}
+
+                section.ax-starring(data-section="6")
+                    .ax-starring-wrap
+                        .ax-starring-container
+                            .ax-starring-social
+                                .ax-starring-social-header
+                                    .ax-header
+                                        h2: b !{__.home.starring.social.header}
+                                .ax-starring-social-items
+                                    a.ax-starring-social-item(target="_blank", title="Telegram"): +svgsprite('telegram')
+                                    a.ax-starring-social-item(target="_blank", title="Medium"): +svgsprite('medium')
+                                    a.ax-starring-social-item(target="_blank", title="Twitter"): +svgsprite('twitter')
+                                    a.ax-starring-social-item(target="_blank", title="Instagram"): +svgsprite('instagram')
+                                    a.ax-starring-social-item(target="_blank", title="Facebook"): +svgsprite('facebook')
+                                    a.ax-starring-social-item(target="_blank", title="YouTube"): +svgsprite('youtube')
+                                    a.ax-starring-social-item(target="_blank", title="LinkedIn"): +svgsprite('linkedin')
+                        .ax-starring-access
+                            .ax-starring-access-grid
+                                .ax-starring-access-grid-col.-left
+                                    .ax-starring-access-img: img(src="/assets/img/starring/phone.png", srcset="/assets/img/starring/phone@2x.png 2x", alt)
+                                .ax-starring-access-grid-col.-right
+                                    .ax-starring-access-box
+                                        .ax-starring-access-box-header
+                                            .ax-header
+                                                h2
+                                                    b !{__.home.starring.access.header[0]}
+                                                    br
+                                                    em !{__.home.starring.access.header[1]}
+
+                                        .ax-starring-access-box-line
+                                        .ax-starring-access-box-form
+                                            form.ax-form
+                                                .ax-form-group
+                                                    .ax-input.ax-input_light
+                                                        input(type="email", placeholder=__.home.starring.access.form.email)
+                                                        .ax-input_light-line
+                                                        .ax-input_light-addon.-right
+                                                            button.ax-btn.ax-btn_clean(type="submit"): +svgsprite('chevron-right')
+
+                +footer
+
+        section.ax-showcase.-fixed
+            .ax-showcase-wrap
+                .ax-showcase-container
+                    .ax-showcase-carousel
+                        .ax-showcase-carousel-roll
+                        .ax-showcase-carousel-grid
+                            .ax-showcase-carousel-grid-col.-left
+                                .ax-showcase-carousel-num
+                                    .ax-showcase-carousel-num-cur 01
+                                    .ax-showcase-carousel-num-spl /
+                                    .ax-showcase-carousel-num-count 0!{__.home.showcase.list.length}
+                                .ax-showcase-carousel-progress
+                                    .ax-showcase-carousel-progress-track.-active-1
+                                        span
+                                        span
+                                        span
+                                    .ax-showcase-carousel-progress-item
+                                    .ax-showcase-carousel-progress-item
+                                    .ax-showcase-carousel-progress-item
+                            .ax-showcase-carousel-grid-col.-right
+                                .ax-showcase-carousel-items
+                                    .ax-showcase-carousel-items-view
+                                        each item in __.home.showcase.list
+                                            .ax-showcase-carousel-item
+                                                .ax-showcase-carousel-item-title !{item.title}
+
+        nav.ax-nav.ax-nav_scroll(role="navigation")
+            .ax-nav_scroll-inner
+                .ax-nav_scroll-track.-active-1
+                    - for(var i = 0; i < 6; i++)
+                        span
+                a.ax-nav_scroll-item(data-nav-section="1").-active: span: span 01
+                a.ax-nav_scroll-item(data-nav-section="2"): span: span 02
+                a.ax-nav_scroll-item(data-nav-section="3"): span: span 03
+                a.ax-nav_scroll-item(data-nav-section="4"): span: span 04
+                a.ax-nav_scroll-item(data-nav-section="5"): span: span 05
+                a.ax-nav_scroll-item(data-nav-section="6"): span: span 06

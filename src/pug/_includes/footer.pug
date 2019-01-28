@@ -1,0 +1,21 @@
+mixin footer(options)
+    .ax-footer&attributes(attributes)
+        .ax-footer-wrap
+            .ax-footer-container
+                .ax-footer-grid
+                    .ax-footer-grid-col.-left
+                        .ax-footer-nav
+                            a.ax-footer-nav-item(href="") !{__.footer.nav.privacy}
+                            a.ax-footer-nav-item(href="") !{__.footer.nav.terms}
+                        .ax-footer-text !{__.footer.copyright}
+                    .ax-footer-grid-col.-center
+                        .ax-footer-mail
+                            a.ax-btn.ax-btn_sign(href="mailto:" + __.footer.mail): span !{__.footer.mail}
+                        .ax-footer-address
+                            address
+                                each t in __.footer.address
+                                    p !{t}
+                    .ax-footer-grid-col.-right
+                        .ax-footer-holding
+                            .ax-footer-holding-text !{__.footer.holding}
+                            .ax-footer-holding-img: img(src="/assets/img/logo/atom.png", srcset="/assets/img/logo/atom@2x.png 2x", alt)
